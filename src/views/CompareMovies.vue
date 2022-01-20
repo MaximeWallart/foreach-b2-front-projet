@@ -1,9 +1,24 @@
 <template>
     <v-container>
-        tests
-        <v-img :src="movie.image">
-
-        </v-img>
+        <v-row>
+        <v-col>
+            <v-img 
+                contain
+                :src=movie1.image
+                max-height="500"
+                max-width="500"
+            />
+        </v-col>
+        <v-col>VS</v-col>
+        <v-col>
+            <v-img
+                contain
+                :src=movie2.image
+                max-height="500"
+                max_width="500"
+            />
+        </v-col>
+        </v-row>
     </v-container>
 </template>
 <script>
@@ -13,7 +28,8 @@ export default {
     data() {
         return {
             movies: {},
-            movie: {},
+            movie1: {},
+            movie2: {},
             error: "",
         }
     },
@@ -26,10 +42,11 @@ export default {
             }
         },
         async getRandomMovie() {
-            this.getAllMovies()
-            const idx = Math.floor(Math.random() * this.images.length)
-            this.movie = this.movies[idx]
-            console.log(this.movie.title);
+            await this.getAllMovies()
+            const idx1 = Math.floor(Math.random() * this.movies.length)
+            this.movie1 = this.movies[idx1]
+            const idx2 = Math.floor(Math.random() * this.movies.length)
+            this.movie2 = this.movies[idx2]
         }
     },
     async mounted() {
