@@ -5,19 +5,25 @@ import * as names from './names'
 
 import ShowAllMovies from '../views/ShowAllMovies.vue'
 import ErrorPage from '../views/ErrorPage.vue'
+import CompareMovies from '../views/CompareMovies.vue'
 
 Vue.use(Router)
 
 const routes = [
+    {
+        path: '*',
+        name: names.ERRORPAGE,
+        component: ErrorPage,
+    },
     {
         path: '/showallmovies',
         name: names.SHOWALLMOVIES,
         component: ShowAllMovies,
     },
     {
-        path: '/errorpage',
-        name: names.ERRORPAGE,
-        component: ErrorPage,
+        path: '/comparemovies',
+        name : names.COMPAREMOVIES,
+        component: CompareMovies
     }
 ]
 

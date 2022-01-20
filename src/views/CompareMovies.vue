@@ -1,14 +1,9 @@
 <template>
     <v-container>
-        <h1>
-            Page to show all movies:
-        </h1>
+        tests
+        <v-img :src="movie.image">
 
-        <ul>
-            <li v-for="movie in movies" :key="movie.id">
-                {{ movie.title }}
-            </li>
-        </ul>
+        </v-img>
     </v-container>
 </template>
 <script>
@@ -18,6 +13,7 @@ export default {
     data() {
         return {
             movies: {},
+            movie: {},
             error: "",
         }
     },
@@ -28,11 +24,16 @@ export default {
             } catch(e) {
                 this.error = e
             }
+        },
+        async getRandomMovie() {
+            this.getAllMovies()
+            const idx = Math.floor(Math.random() * this.images.length)
+            this.movie = this.movies[idx]
+            console.log(this.movie.title);
         }
     },
     async mounted() {
-        return this.getAllMovies()
+        return this.getRandomMovie()
     }
-
 }
 </script>

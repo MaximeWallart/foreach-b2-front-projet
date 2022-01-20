@@ -6,7 +6,7 @@ const movieInstance = axios.create({
 
 export async function getAllMovies() {
     try {
-        const data = movieInstance.get('/films')
+        const { data } = await movieInstance.get('/films')
 
         return data
     } catch(e) {

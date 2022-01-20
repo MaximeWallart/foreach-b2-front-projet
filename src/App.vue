@@ -6,6 +6,8 @@
       dark
     >
     <router-link to='/showallmovies' tag='button'>Link to all movies</router-link>
+    <v-spacer/>
+    <router-link to='/comparemovies' tag='button'>Compare ghiblis</router-link>
         
     </v-app-bar>
 
