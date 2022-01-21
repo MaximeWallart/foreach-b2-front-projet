@@ -5,9 +5,9 @@
       color="primary"
       dark
     >
-    <router-link to='/showallmovies' tag='button'>Link to all movies</router-link>
+    <router-link to='/showallmovies' tag='button'>{{ $t('link-to-all-movies') }}</router-link>
     <v-spacer/>
-    <router-link to='/comparemovies' tag='button'>Compare ghiblis</router-link>
+    <router-link to='/comparemovies' tag='button'>{{ $t('compare-ghiblis') }}</router-link>
         
     </v-app-bar>
 

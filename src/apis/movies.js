@@ -16,3 +16,15 @@ export async function getAllMovies() {
         throw new Error("Une erreur est survenue")
     }
 }
+export async function getMovie(id) {
+    try {
+        const {data} = await movieInstance.get(`/films/${id}`)
+
+        return data
+    } catch(e) {
+        if(e.response.status == 404) {
+            throw new Error("Error while getting the movie")
+        }
+        throw new Error("Une erreur est survenue")
+    }
+}

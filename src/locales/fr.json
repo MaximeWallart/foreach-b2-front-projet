@@ -1,3 +1,7 @@
 {
-  "message": "Bonjour i18n !!"
+  "start-a-new-round": "Commencer un nouveau round",
+  "you-are-currently-in-the-round": "Vous êtes actuellement dans le round ",
+  "your-favorite-ghibli-movie-is": "Votre Ghibli préféré est ",
+  "compare-ghiblis": "Comparer les Ghiblis",
+  "link-to-all-movies": "Lien vers tout les films"
 }
