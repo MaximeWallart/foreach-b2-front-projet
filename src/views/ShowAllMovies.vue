@@ -6,7 +6,7 @@
 
         <ul>
             <li v-for="movie in movies" :key="movie.id">
-                {{ movie.title }}
+                <a href="'https://fr.wikipedia.org/wiki/' + movie.title">{{ movie.title }}</a>
             </li>
         </ul>
     </v-container>

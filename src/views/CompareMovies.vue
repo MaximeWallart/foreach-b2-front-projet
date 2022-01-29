@@ -61,10 +61,14 @@ export default {
       window.alert( this.$t('your-favorite-ghibli-movie-is') + win.title)
     },
     saveClickedMovie(winner, loser) {
-      if (this.winners.length + this.losers.length < this.movies.length) {
+      console.log("before : " + (this.winners.length + this.losers.length) + " / " + this.movies.length);
+      if (this.winners.length + this.losers.length < this.movies.length) { 
         this.winners.push(winner);
         this.losers.push(loser);
-        console.log(this.winners.length);
+        console.log("after : " + (this.winners.length + this.losers.length) + " / " + this.movies.length);
+        // console.log(this.winners.length);
+        // console.log(this.winners);
+        // console.log(this.losers);
         if (this.winners.length + this.losers.length < this.movies.length) {
           this.getRandomMovie();
         }
@@ -80,7 +84,9 @@ export default {
     async setUp() {
       try {
         this.movies = await getAllMovies();
-        this.winners.push(this.movies[0].id);
+        if(this.movies.length%2!=0) {
+          this.winners.push(this.movies[0].id);
+        }
         this.getRandomMovie();
       } catch (e) {
         this.error = e;
@@ -94,10 +100,6 @@ export default {
       ) {
         idx1 = Math.floor(Math.random() * this.movies.length);
       }
-      //   console.log('winner : ' + this.winners.indexOf(this.movies[idx1].id));
-      //   console.log(this.winners);
-      //   console.log('loser : ' + this.losers.indexOf(this.movies[idx1].id));
-      //   console.log(this.losers);
       this.movie1 = this.movies[idx1];
 
       var idx2 = Math.floor(Math.random() * this.movies.length);
