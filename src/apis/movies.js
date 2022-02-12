@@ -28,3 +28,28 @@ export async function getMovie(id) {
         throw new Error("Une erreur est survenue")
     }
 }
+
+export async function getAllCharacters() {
+    try {
+        const { data } = await movieInstance.get('/people')
+
+        return data
+    } catch(e) {
+        if(e.response.status == 404) {
+            throw new Error("Error while getting all characters")
+        }
+        throw new Error("An error occurred")
+    }
+}
+export async function getCharacter(id) {
+    try {
+        const { data } = await movieInstance.get(`/people/${id}`)
+
+        return data
+    } catch(e) {
+        if(e.response.status == 404) {
+            throw new Error(`Error while getting character with id: ${id}`)
+        }
+        throw new Error("An error occurred")
+    }
+}
