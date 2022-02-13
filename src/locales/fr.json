@@ -3,5 +3,10 @@
   "you-are-currently-in-the-round": "Vous êtes actuellement dans le round ",
   "compare-ghiblis": "Comparer les Ghiblis",
   "link-to-all-movies": "Lien vers tout les films",
-  "your-favorite-ghibli-character-is": "Votre personnage Ghibli préféré est "
+  "your-favorite-ghibli-character-is": "Votre personnage Ghibli préféré est ",
+  "your-favorite-movie-is": "Votre film préféré est",
+  "description": "Description : ",
+  "rating": "Note : ",
+  "release": "Sortie : ",
+  "duration": "Durée : "
 }

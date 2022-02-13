@@ -3,5 +3,10 @@
   "start-a-new-round": "Start a new round\n\nPlease wait for the loading to finish after pressing Ok",
   "link-to-all-movies": "Link to all movies",
   "compare-ghiblis": "Compare Ghiblis",
-  "your-favorite-ghibli-character-is": "Your favorite Ghibli character is "
+  "your-favorite-ghibli-character-is": "Your favorite Ghibli character is ",
+  "your-favorite-movie-is": "Your favorite movie is",
+  "description": "Description : ",
+  "release": "Release : ",
+  "rating": "Rating : ",
+  "duration": "Duration : "
 }

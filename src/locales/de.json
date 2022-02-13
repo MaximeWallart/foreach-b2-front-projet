@@ -3,5 +3,10 @@
   "you-are-currently-in-the-round": "Du bist gerade in der Runde ",
   "compare-ghiblis": "Vergleichen Ghiblis",
   "link-to-all-movies": "Link zu allen Filmen",
-  "your-favorite-ghibli-character-is": "Ihr Lieblings Ghibli Charakter ist "
+  "your-favorite-ghibli-character-is": "Ihr Lieblings Ghibli Charakter ist ",
+  "your-favorite-movie-is": "Ihr Lieblingfilm ist",
+  "description": "Bezeichnung : ",
+  "rating": "Bewertung : ",
+  "release": "Freisetzung : ",
+  "duration": "Dauer :  "
 }
