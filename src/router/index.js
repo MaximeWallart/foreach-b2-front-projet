@@ -7,6 +7,7 @@ import ShowAllMovies from '../views/ShowAllMovies.vue'
 import ErrorPage from '../views/ErrorPage.vue'
 import CompareMovies from '../views/CompareMovies.vue'
 import CompareCharacters from '../views/CompareCharacters.vue'
+import WinnerPage from '../views/WinnerPage.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ const routes = [
         path: '/comparecharacters',
         name : names.COMPARECHARACTERS,
         component: CompareCharacters
+    },
+    {
+        path: '/winnerpage',
+        name : names.WINNERPAGE,
+        component: WinnerPage
     }
 ]
 

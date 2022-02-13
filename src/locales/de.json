@@ -1,7 +1,7 @@
 {
-  "start-a-new-round": "Eine neue Runde starten",
+  "start-a-new-round": "Eine neue Runde starten\n\nBitte warten sie auf das Laden, nachdem sie auf Ok geklickt haben",
   "you-are-currently-in-the-round": "Du bist gerade in der Runde ",
-  "your-favorite-ghibli-movie-is": "Deine Lieblings-Ghibli ist",
   "compare-ghiblis": "Vergleichen Ghiblis",
-  "link-to-all-movies": "Link zu allen Filmen"
+  "link-to-all-movies": "Link zu allen Filmen",
+  "your-favorite-ghibli-character-is": "Ihr Lieblings Ghibli Charakter ist "
 }

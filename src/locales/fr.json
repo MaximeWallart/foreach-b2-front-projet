@@ -1,7 +1,7 @@
 {
-  "start-a-new-round": "Commencer un nouveau round",
+  "start-a-new-round": "Commencer un nouveau round\n\nVeuillez patienter pour le chargement après avoir cliqué sur Ok",
   "you-are-currently-in-the-round": "Vous êtes actuellement dans le round ",
-  "your-favorite-ghibli-movie-is": "Votre Ghibli préféré est ",
   "compare-ghiblis": "Comparer les Ghiblis",
-  "link-to-all-movies": "Lien vers tout les films"
+  "link-to-all-movies": "Lien vers tout les films",
+  "your-favorite-ghibli-character-is": "Votre personnage Ghibli préféré est "
 }

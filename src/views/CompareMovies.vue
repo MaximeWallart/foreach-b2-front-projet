@@ -58,28 +58,31 @@ export default {
     },
     async getWinner(){
       let win = await getMovie(this.winners[0])
-      window.alert( this.$t('your-favorite-ghibli-movie-is') + win.title)
+      this.$router.push({name: '/winnerpage', params : {id : win.id}})
     },
-    saveClickedMovie(winner, loser) {
+    async saveClickedMovie(winner, loser) {
       console.log("before : " + (this.winners.length + this.losers.length) + " / " + this.movies.length);
       if (this.winners.length + this.losers.length < this.movies.length) { 
         this.winners.push(winner);
         this.losers.push(loser);
         console.log("after : " + (this.winners.length + this.losers.length) + " / " + this.movies.length);
-        // console.log(this.winners.length);
-        // console.log(this.winners);
-        // console.log(this.losers);
         if (this.winners.length + this.losers.length < this.movies.length) {
           this.getRandomMovie();
         }
+        else{
+          await this.endRound()
+        }
       } else {
-        if (this.winners.length == 1) {
-          this.getWinner()
+        await this.endRound()
+      }
+    },
+    async endRound() {
+      if (this.winners.length == 1) {
+          await this.getWinner()
         } else {
           window.alert(this.$t('start-a-new-round'));
-          this.newRound();
+          await this.newRound();
         }
-      }
     },
     async setUp() {
       try {
